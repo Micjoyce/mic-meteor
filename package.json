@@ -1,6 +1,6 @@
 {
   "name": "mic-meteor",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Alternative Meteor client",
   "main": "lib/asteroid.js",
   "scripts": {
