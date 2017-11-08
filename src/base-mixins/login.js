@@ -14,7 +14,8 @@ import {
   onLogin,
   onLogout,
   resumeLogin,
-  refreshToken
+  refreshToken,
+  getUserToken
 } from '../common/login-method';
 
 /*
@@ -38,6 +39,7 @@ export function init() {
     return null;
   };
   this.refreshToken = refreshToken;
+  this.getUserToken = getUserToken;
   this.onLogin = onLogin;
   this.onLogout = onLogout;
   this.loggedIn = false;

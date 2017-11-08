@@ -16,6 +16,10 @@ export function refreshToken({
     .then(() => id);
 }
 
+export function getUserToken() {
+  return multiStorage.get(this.__login_token__)
+}
+
 export function onLogin({
   id,
   token
