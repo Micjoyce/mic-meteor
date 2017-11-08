@@ -9,41 +9,41 @@
  *     connection with the server
  */
 
-import DDP from 'mic-ddp';
+import DDP from "mic-ddp";
 
 /*
  *   Public methods
  */
 
-export function connect() {
-  this.ddp.connect();
+export function connect () {
+    this.ddp.connect();
 }
 
-export function disconnect() {
-  this.ddp.disconnect();
+export function disconnect () {
+    this.ddp.disconnect();
 }
 
 /*
  *   Init method
  */
 
-export function init(options) {
-  const {
-    endpoint,
-    SocketConstructor = WebSocket,
-    autoConnect,
-    autoReconnect,
-    reconnectInterval
-  } = options;
-  this.endpoint = endpoint;
-  const ddpOptions = {
-    endpoint,
-    SocketConstructor,
-    autoConnect,
-    autoReconnect,
-    reconnectInterval
-  };
-  this.ddp = new DDP(ddpOptions)
-    .on('connected', () => this.emit('connected'))
-    .on('disconnected', () => this.emit('disconnected'));
+export function init (options) {
+    const {
+        endpoint,
+        SocketConstructor = WebSocket,
+        autoConnect,
+        autoReconnect,
+        reconnectInterval
+    } = options;
+    this.endpoint = endpoint;
+    const ddpOptions = {
+        endpoint,
+        SocketConstructor,
+        autoConnect,
+        autoReconnect,
+        reconnectInterval
+    };
+    this.ddp = new DDP(ddpOptions)
+        .on("connected", () => this.emit("connected"))
+        .on("disconnected", () => this.emit("disconnected"));
 }

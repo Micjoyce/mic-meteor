@@ -11,37 +11,37 @@
  */
 
 import {
-  onLogin,
-  onLogout,
-  resumeLogin,
-  refreshToken,
-  getUserToken
-} from '../common/login-method';
+    onLogin,
+    onLogout,
+    resumeLogin,
+    refreshToken,
+    getUserToken
+} from "../common/login-method";
 
 /*
  *   Public methods
  */
 
-export function login(loginParameters) {
-  return this.call('login', loginParameters).then(onLogin.bind(this));
+export function login (loginParameters) {
+    return this.call("login", loginParameters).then(onLogin.bind(this));
 }
 
-export function logout() {
-  return this.call('logout').then(onLogout.bind(this));
+export function logout () {
+    return this.call("logout").then(onLogout.bind(this));
 }
 
 /*
  *   Init method
  */
 
-export function init() {
-  this.userId = function() {
-    return null;
-  };
-  this.refreshToken = refreshToken;
-  this.getUserToken = getUserToken;
-  this.onLogin = onLogin;
-  this.onLogout = onLogout;
-  this.loggedIn = false;
-  this.ddp.on('connected', resumeLogin.bind(this));
+export function init () {
+    this.userId = function () {
+        return null;
+    };
+    this.refreshToken = refreshToken;
+    this.getUserToken = getUserToken;
+    this.onLogin = onLogin;
+    this.onLogout = onLogout;
+    this.loggedIn = false;
+    this.ddp.on("connected", resumeLogin.bind(this));
 }

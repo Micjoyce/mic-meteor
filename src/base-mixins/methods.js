@@ -11,39 +11,39 @@
  *   Public methods
  */
 
-export function apply(method, params) {
-  return new Promise((resolve, reject) => {
-    const id = this.ddp.method(method, params);
-    this.methods.cache[id] = {
-      resolve,
-      reject
-    };
-  });
+export function apply (method, params) {
+    return new Promise((resolve, reject) => {
+        const id = this.ddp.method(method, params);
+        this.methods.cache[id] = {
+            resolve,
+            reject
+        };
+    });
 }
 
-export function call(method, ...params) {
-  return this.apply(method, params);
+export function call (method, ...params) {
+    return this.apply(method, params);
 }
 
 /*
  *   Init method
  */
 
-export function init() {
-  this.methods = {
-    cache: {}
-  };
-  this.ddp.on('result', ({
-    id,
-    error,
-    result
-  }) => {
-    const method = this.methods.cache[id];
-    if (error) {
-      method.reject(error);
-    } else {
-      method.resolve(result);
-    }
-    delete this.methods.cache[id];
-  });
+export function init () {
+    this.methods = {
+        cache: {}
+    };
+    this.ddp.on("result", ({
+        id,
+        error,
+        result
+    }) => {
+        const method = this.methods.cache[id];
+        if (error) {
+            method.reject(error);
+        } else {
+            method.resolve(result);
+        }
+        delete this.methods.cache[id];
+    });
 }

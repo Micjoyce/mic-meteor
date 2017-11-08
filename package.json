@@ -50,7 +50,6 @@
   },
   "dependencies": {
     "ddp.js": "^2.2.0",
-    "js-cookie": "^2.1.4",
     "lodash.assign": "^4.2.0",
     "lodash.isboolean": "^3.0.3",
     "lodash.isfunction": "^3.0.8",
