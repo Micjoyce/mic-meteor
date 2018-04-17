@@ -6,7 +6,7 @@
 [![Dependency Status](https://david-dm.org/mondora/asteroid.svg)](https://david-dm.org/mondora/asteroid)
 [![devDependency Status](https://david-dm.org/mondora/asteroid/dev-status.svg)](https://david-dm.org/mondora/asteroid#info=devDependencies)
 
-# asteroid
+# Meteor
 
 A javascript client (node) for a Meteor backend.
 
