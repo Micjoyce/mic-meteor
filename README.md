@@ -1,11 +1,5 @@
 # This package is fork from [https://github.com/mondora/asteroid](https://github.com/mondora/asteroid)
 
-[![npm version](https://badge.fury.io/js/asteroid.svg)](https://badge.fury.io/js/asteroid)
-[![Build Status](https://travis-ci.org/mondora/asteroid.svg?branch=master)](https://travis-ci.org/mondora/asteroid)
-[![Coverage Status](https://img.shields.io/coveralls/mondora/asteroid.svg)](https://coveralls.io/r/mondora/asteroid?branch=master)
-[![Dependency Status](https://david-dm.org/mondora/asteroid.svg)](https://david-dm.org/mondora/asteroid)
-[![devDependency Status](https://david-dm.org/mondora/asteroid/dev-status.svg)](https://david-dm.org/mondora/asteroid#info=devDependencies)
-
 # Meteor
 
 A javascript client (node) for a Meteor backend.
